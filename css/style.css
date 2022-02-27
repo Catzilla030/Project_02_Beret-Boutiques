@@ -283,7 +283,7 @@ aside p {
 .grid {
   display: grid;
   gap: 26px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 3% 10% 5%;
 }
 .item {
@@ -354,14 +354,14 @@ form .button {
 }
 label {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 10px;
   display: block;
 }
 input[type="text"],
 input[type="email"],
 textarea {
-  background: rgba(255, 253, 230, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   border: 1px rgb(158, 158, 158) solid;
   padding: 10px;
 }
