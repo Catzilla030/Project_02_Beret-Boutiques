@@ -113,13 +113,13 @@ img {
   background-repeat: no-repeat;
 }
 #home {
-  background-image: url(/images/alyssa-strohmann-unsplash.jpg);
+  background-image: url("../images/alyssa-strohmann-unsplash.jpg");
   min-height: 100vh; /*設置元素的屬性最小高度*/
 }
 
 /* news */
 #news {
-  background-image: url(/images/news.JPG);
+  background-image: url("../images/news.jpg");
   background-position: center;
   height: 270px;
   margin-bottom: 40px;
@@ -251,7 +251,7 @@ aside p {
 
 /* menu */
 #menu {
-  background-image: url("/images/menu.jpg");
+  background-image: url("../images/menu.jpg");
   background-position: center;
   height: 270px;
   margin-bottom: 40px;
@@ -336,7 +336,7 @@ aside p {
       rgba(255, 255, 255, 0.5),
       rgba(255, 252, 220, 0.1)
     ),
-    url("/images/contact.jpg");
+    url("../images/contact.jpg");
   /* 背景漸層 */
   /* photo by Cup of Couple - Pexels*/
   background-position: center;
