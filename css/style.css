@@ -119,7 +119,7 @@ img {
 
 /* news */
 #news {
-  background-image: url("/images/news.jpg");
+  background-image: url(/images/news.JPG);
   background-position: center;
   height: 270px;
   margin-bottom: 40px;
