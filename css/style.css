@@ -1,0 +1,507 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  /* 使所有頁面均有滾動條寬度佔據空間 
+  原因 : 首頁無高度，切換到別的頁面時，因多出滾動條，會使網頁寬度改變
+  Chrome 17px
+  */
+  scroll-behavior: smooth;
+  /* 點及連結後頁面滾動動畫，safari 不支援 */
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.7;
+  color: rgb(43, 37, 31);
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+img {
+  max-width: 100%;
+  /* 影像寬度為父元素的100% */
+}
+.logo {
+  width: 210px;
+  margin-top: 14px;
+}
+::selection {
+  background-color: rgba(184, 104, 24, 0.8);
+  color: #fff;
+}
+/* 選取時背景顏色 */
+
+/* 導覽列文字 */
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  /* 文字全大寫 */
+  margin-top: 27px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 15px;
+}
+.main-nav a {
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 3.5px;
+}
+.main-nav a:hover {
+  color: rgb(163, 85, 8);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* header */
+.web-header {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 置中對齊 */
+  padding: 0 2.5%;
+  /* 左右內側留白 */
+}
+.wrapper-content {
+  max-width: 60%;
+  height: 270px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  /* 置中對齊 */
+  padding: 0 2.5%;
+  /* 左右內側留白 */
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  /* 平行四邊形造型 */
+}
+
+/* home-content */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.15rem;
+  margin: 10px 0 40px;
+}
+.page-title {
+  font-size: 4.5rem;
+  font-family: "Noto Serif TC", serif;
+  padding: 0;
+}
+.button {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(233, 142, 24);
+  padding: 10px 30px;
+  border-radius: 3px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 204, 109);
+  transition: 0.2s;
+}
+/* 背景 */
+.big-bg {
+  background-size: cover; /*維持長寬比&填滿畫面*/
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home {
+  background-image: url(/images/alyssa-strohmann-unsplash.jpg);
+  min-height: 100vh; /*設置元素的屬性最小高度*/
+}
+
+/* news */
+#news {
+  background-image: url("/images/news.jpg");
+  background-position: center;
+  height: 270px;
+  margin-bottom: 40px;
+}
+#news .page-title {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* footer */
+footer {
+  background-color: rgb(179, 113, 26);
+  text-align: center;
+  padding: 25px 0;
+}
+footer p {
+  color: #fff;
+  font-size: 0.7rem;
+}
+
+/* 最新消息區塊 */
+article {
+  width: 64%;
+}
+aside {
+  width: 22%;
+}
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.post-info {
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+/* 日期 */
+.post-date {
+  color: rgb(148, 88, 9);
+  font-size: 0.5rem;
+  text-align: start;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  padding-top: 10px;
+  padding-left: 25px;
+  margin-top: 25px;
+  line-height: 40px;
+}
+/* tag */
+.post-date a {
+  color: rgb(0, 71, 179);
+  border: 2px rgb(0, 71, 179) solid;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding: 3px 10px 3px 10px;
+  margin-right: 6px;
+  line-height: 30px;
+  transition: 0.2s;
+}
+.post-date a:hover {
+  color: #fff;
+  background-color: rgb(0, 71, 179);
+}
+.post-title {
+  font-size: 2.1rem;
+  border-left: 5px rgb(148, 88, 9) solid;
+  padding-left: 20px;
+  height: 55px;
+  line-height: 55px;
+}
+
+article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: 90px;
+}
+article img {
+  width: 850px;
+}
+
+/* 圖片來源 */
+article .img-source {
+  color: rgb(170, 170, 170);
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+article p {
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+/* 邊欄 */
+.sub-title {
+  font-size: 1.3rem;
+  padding: 0 9px 8px;
+  border-bottom: 2px rgb(148, 88, 9) solid;
+  font-weight: 600;
+}
+.sub-menu {
+  margin-bottom: 60px;
+  list-style: none;
+}
+.sub-menu li {
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+  padding: 10px;
+  color: rgb(60, 60, 60);
+  display: block;
+  transition: 0.2s;
+}
+.sub-menu a:hover {
+  color: rgb(148, 88, 9);
+  background-color: rgba(255, 145, 0, 0.3);
+}
+.sub-img {
+  margin: 15px 23px 15px 23px;
+  width: 200px;
+}
+aside p {
+  padding: 10px;
+}
+
+/* menu */
+#menu {
+  background-image: url("/images/menu.jpg");
+  background-position: center;
+  height: 270px;
+  margin-bottom: 40px;
+}
+#menu .page-title {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.menu-title {
+  text-align: center;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.menu-subtitle {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-left: 4px;
+  font-weight: 200;
+  margin: 30px 0 70px;
+}
+.menu-border {
+  width: 30px;
+  border: 0.3px rgb(56, 56, 56) solid;
+  background-color: rgb(56, 56, 56);
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 3% 10% 5%;
+}
+.item {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+.item-btn-container {
+  display: flex;
+  justify-content: center;
+}
+.item-btn {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  border: 1px rgb(114, 114, 114) solid;
+  border-radius: 2.5px;
+  margin: 5px 5px 0;
+  color: rgb(46, 46, 46);
+  background-color: rgba(238, 238, 238, 0.5);
+  transition: 0.1s;
+}
+.item-btn:hover {
+  background-color: rgba(255, 162, 39, 0.5);
+}
+.item p {
+  text-align: center;
+  color: rgb(46, 46, 46);
+  margin: 10px 0;
+  line-height: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.grid img {
+  width: 350px;
+  transition: all 0.5s ease-out; /*圖片放大所需的時間和特效*/
+}
+.grid img:hover {
+  box-shadow: 3px 3px 3px rgba(58, 58, 58, 0.2);
+  transform: scale(0.95, 0.95);
+  transition: 0.5s;
+}
+
+/* contact */
+#contact {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 252, 220, 0.1)
+    ),
+    url("/images/contact.jpg");
+  /* 背景漸層 */
+  /* photo by Cup of Couple - Pexels*/
+  background-position: center;
+  min-height: 100vh;
+}
+#contact .page-title {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* form 表單 */
+form div,
+form .button {
+  margin: 19px 0 14px 200px;
+}
+label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 253, 230, 0.5);
+  border: 1px rgb(158, 158, 158) solid;
+  padding: 10px;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+textarea {
+  width: 100%;
+  max-width: 480px;
+  height: 6rem;
+}
+input[type="submit"] {
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+/* 地圖 */
+#location {
+  padding: 4% 0;
+}
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  width: 24%;
+}
+.location-info p {
+  padding: 10px 8px;
+  letter-spacing: 0.5px;
+}
+.location-map {
+  width: 72%;
+}
+iframe {
+  width: 100%;
+}
+
+/* 側邊圖示/回到頂端/首頁 */
+.sticky .up_icon {
+  width: 45px;
+  position: fixed;
+  padding: 3px;
+  top: 82%;
+  left: 93.5%;
+  border: solid 3px rgb(29, 29, 29);
+  border-radius: 50%;
+  z-index: 5;
+}
+.sticky .home_icon {
+  width: 45px;
+  position: fixed;
+  padding: 3px;
+  top: 74%;
+  left: 93.5%;
+  border: solid 3px rgb(29, 29, 29);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+/* RWD */
+@media (max-width: 600px) {
+  /* HOME */
+  .page-title {
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
+  .web-header {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .main-nav {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.4rem;
+  }
+  .home-content {
+    margin-top: 20%;
+  }
+  .home-content p {
+    font-size: 0.7rem;
+    padding: 0 2px 0 2px;
+  }
+  .wrapper-content {
+    max-width: 80%;
+    height: 200px;
+  }
+  .button {
+    font-size: 0.7rem;
+    padding: 10px 15px;
+  }
+  .button:hover {
+    padding: 10px 18px;
+  }
+  .logo {
+    width: 110px;
+    margin-top: 14px;
+  }
+
+  /* NEWS */
+  .news-contents {
+    flex-direction: column;
+    width: 95%;
+    margin-left: 3%;
+  }
+  article,
+  aside {
+    width: 94%;
+  }
+  .post-title {
+    font-size: 1.7rem;
+  }
+  .post-date a {
+    font-size: 0.1rem;
+  }
+  #location {
+    padding: 4% 5%;
+  }
+
+  form div,
+  form .button {
+    margin: 19px 0 14px 20px;
+  }
+  .location-info h3 {
+    font-size: 0.7rem;
+  }
+  .location-info p {
+    padding: 5px 4px;
+    font-size: 0.7rem;
+  }
+
+  .sticky .up_icon {
+    width: 40px;
+    left: 90.5%;
+  }
+  .sticky .home_icon {
+    width: 40px;
+    left: 90.5%;
+  }
+}
